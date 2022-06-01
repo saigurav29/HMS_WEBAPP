@@ -1,0 +1,13 @@
+F:\Mahesh\HMS_APP\HMS_DATAACCESS\obj\Debug\netcoreapp3.1\HMS_DATAACCESS.csproj.AssemblyReference.cache
+F:\Mahesh\HMS_APP\HMS_DATAACCESS\obj\Debug\netcoreapp3.1\HMS_DATAACCESS.GeneratedMSBuildEditorConfig.editorconfig
+F:\Mahesh\HMS_APP\HMS_DATAACCESS\obj\Debug\netcoreapp3.1\HMS_DATAACCESS.AssemblyInfoInputs.cache
+F:\Mahesh\HMS_APP\HMS_DATAACCESS\obj\Debug\netcoreapp3.1\HMS_DATAACCESS.AssemblyInfo.cs
+F:\Mahesh\HMS_APP\HMS_DATAACCESS\obj\Debug\netcoreapp3.1\HMS_DATAACCESS.csproj.CoreCompileInputs.cache
+F:\Mahesh\HMS_APP\HMS_DATAACCESS\bin\Debug\netcoreapp3.1\HMS_DATAACCESS.deps.json
+F:\Mahesh\HMS_APP\HMS_DATAACCESS\bin\Debug\netcoreapp3.1\HMS_DATAACCESS.runtimeconfig.json
+F:\Mahesh\HMS_APP\HMS_DATAACCESS\bin\Debug\netcoreapp3.1\HMS_DATAACCESS.runtimeconfig.dev.json
+F:\Mahesh\HMS_APP\HMS_DATAACCESS\bin\Debug\netcoreapp3.1\HMS_DATAACCESS.dll
+F:\Mahesh\HMS_APP\HMS_DATAACCESS\bin\Debug\netcoreapp3.1\HMS_DATAACCESS.pdb
+F:\Mahesh\HMS_APP\HMS_DATAACCESS\obj\Debug\netcoreapp3.1\HMS_DATAACCESS.dll
+F:\Mahesh\HMS_APP\HMS_DATAACCESS\obj\Debug\netcoreapp3.1\HMS_DATAACCESS.pdb
+F:\Mahesh\HMS_APP\HMS_DATAACCESS\obj\Debug\netcoreapp3.1\HMS_DATAACCESS.genruntimeconfig.cache
