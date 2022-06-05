@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Zsl4rIDvU6ko45bpeihiXspYpEetjJGCCOT6QkMupBoT9KxMf5yvuMABjQs6XOXqXLAx+mXWbAfIcWB+LReo/A==",
+  "dgSpecHash": "nGEV8CQY+5TjE8WinQMM0xqM6h4QF+C+obrSimi2bDAxnopmDNpCZcnBIGPbgDnUapDGGkrPeCbKVHkmcOyHwQ==",
   "success": true,
-  "projectFilePath": "F:\\Mahesh\\HMS_APP\\HMS_APP\\HMS_APP.csproj",
+  "projectFilePath": "F:\\Mahesh\\GIT_HMS_WEBAPP\\HMS_WEBAPP\\HMS_APP\\HMS_APP.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Sai prasad\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Sai prasad\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "D85tCmwG8cwsbGYvWzZ+mI/lApdEe+lpgqvOSfAgdfM9ch6gdasVi1DmkdSqnYmSrKfiqgQrbg25EZgn64zNZw==",
+  "dgSpecHash": "foRbPujN0JBk9Rd2iEgxK4BmBfdq4TVSpOV3qyEGGOBVUP5XuYsj/3rFmh3JA0h5oOwVaWB3o1etqRRmdM2XMQ==",
   "success": true,
-  "projectFilePath": "F:\\Mahesh\\HMS_APP\\HMS_Repository\\HMS_Repository.csproj",
+  "projectFilePath": "F:\\Mahesh\\GIT_HMS_WEBAPP\\HMS_WEBAPP\\HMS_Repository\\HMS_Repository.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Sai prasad\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\Sai prasad\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

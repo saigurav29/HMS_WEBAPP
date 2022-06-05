@@ -15,6 +15,8 @@ namespace HMS_Repository.Extensions
         public static IServiceCollection AddApplicationService(this IServiceCollection services, IConfiguration config)
         {
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IOrdersRepository, OrderRepository>();
+
             services.AddDbContext<HMSDBDbContext>(options => options.UseSqlServer(config.GetConnectionString("DefaultConnection")));
             return services;
         }
