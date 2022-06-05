@@ -29,15 +29,23 @@ namespace HMS_Repository.Repository
 
         public async Task<IList<UserResponse>> ValidateLogin(Userlogin userinfo)
         {
-            var data = await _context.LoginMasters.Where(u=>u.Username==userinfo.Username && u.Password==userinfo.Password).ToListAsync();
-            if (data.Count > 0)
+            try
             {
-                return processdata(data);
+                var data = await _context.LoginMasters.Where(u => u.Username == userinfo.Username && u.Password == userinfo.Password).ToListAsync();
+                if (data.Count > 0)
+                {
+                    return processdata(data);
+                }
+                else
+                {
+                    return null;
+                }
             }
-            else
+            catch(Exception ex)
             {
                 return null;
             }
+           
         }
         public Task<bool> SaveAllAsync(LoginMaster userdata)
         {
