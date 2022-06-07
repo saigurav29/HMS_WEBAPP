@@ -11,3 +11,16 @@ F:\Mahesh\HMS_APP\HMS_DATAACCESS\bin\Debug\netcoreapp3.1\HMS_DATAACCESS.pdb
 F:\Mahesh\HMS_APP\HMS_DATAACCESS\obj\Debug\netcoreapp3.1\HMS_DATAACCESS.dll
 F:\Mahesh\HMS_APP\HMS_DATAACCESS\obj\Debug\netcoreapp3.1\HMS_DATAACCESS.pdb
 F:\Mahesh\HMS_APP\HMS_DATAACCESS\obj\Debug\netcoreapp3.1\HMS_DATAACCESS.genruntimeconfig.cache
+F:\Mahesh\GIT_HMS_WEBAPP\HMS_WEBAPP\HMS_DATAACCESS\bin\Debug\netcoreapp3.1\HMS_DATAACCESS.deps.json
+F:\Mahesh\GIT_HMS_WEBAPP\HMS_WEBAPP\HMS_DATAACCESS\bin\Debug\netcoreapp3.1\HMS_DATAACCESS.runtimeconfig.json
+F:\Mahesh\GIT_HMS_WEBAPP\HMS_WEBAPP\HMS_DATAACCESS\bin\Debug\netcoreapp3.1\HMS_DATAACCESS.runtimeconfig.dev.json
+F:\Mahesh\GIT_HMS_WEBAPP\HMS_WEBAPP\HMS_DATAACCESS\bin\Debug\netcoreapp3.1\HMS_DATAACCESS.dll
+F:\Mahesh\GIT_HMS_WEBAPP\HMS_WEBAPP\HMS_DATAACCESS\bin\Debug\netcoreapp3.1\HMS_DATAACCESS.pdb
+F:\Mahesh\GIT_HMS_WEBAPP\HMS_WEBAPP\HMS_DATAACCESS\obj\Debug\netcoreapp3.1\HMS_DATAACCESS.csproj.AssemblyReference.cache
+F:\Mahesh\GIT_HMS_WEBAPP\HMS_WEBAPP\HMS_DATAACCESS\obj\Debug\netcoreapp3.1\HMS_DATAACCESS.GeneratedMSBuildEditorConfig.editorconfig
+F:\Mahesh\GIT_HMS_WEBAPP\HMS_WEBAPP\HMS_DATAACCESS\obj\Debug\netcoreapp3.1\HMS_DATAACCESS.AssemblyInfoInputs.cache
+F:\Mahesh\GIT_HMS_WEBAPP\HMS_WEBAPP\HMS_DATAACCESS\obj\Debug\netcoreapp3.1\HMS_DATAACCESS.AssemblyInfo.cs
+F:\Mahesh\GIT_HMS_WEBAPP\HMS_WEBAPP\HMS_DATAACCESS\obj\Debug\netcoreapp3.1\HMS_DATAACCESS.csproj.CoreCompileInputs.cache
+F:\Mahesh\GIT_HMS_WEBAPP\HMS_WEBAPP\HMS_DATAACCESS\obj\Debug\netcoreapp3.1\HMS_DATAACCESS.dll
+F:\Mahesh\GIT_HMS_WEBAPP\HMS_WEBAPP\HMS_DATAACCESS\obj\Debug\netcoreapp3.1\HMS_DATAACCESS.pdb
+F:\Mahesh\GIT_HMS_WEBAPP\HMS_WEBAPP\HMS_DATAACCESS\obj\Debug\netcoreapp3.1\HMS_DATAACCESS.genruntimeconfig.cache

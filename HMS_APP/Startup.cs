@@ -45,12 +45,16 @@ namespace HMS_APP
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
 
             app.UseRouting();
 
             app.UseAuthorization();
-            app.UseCors(builder => builder.AllowAnyOrigin());
+            app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()
+            .WithOrigins("http://localhost:4200")
+            .WithOrigins("http://saramahesh-001-site1.htempurl.com"));
+
+
+            app.UseHttpsRedirection();
             // Enable middleware to serve generated Swagger as a JSON endpoint.
             app.UseSwagger();
             // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
