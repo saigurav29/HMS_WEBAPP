@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>F:\Mahesh\GIT_HMS_WEBAPP\HMS_WEBAPP\HMS_APP\bin\Release\netcoreapp3.1\publish\</_PublishTargetUrl>
+    <History>True|2022-06-05T08:19:24.0716711Z;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Server=GURAV\SQLEXPRESS%3bDatabase=HMSDB%3buser id=saiguravpod%3bpassword=Aadya%402021%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>
