@@ -90,8 +90,153 @@ namespace HMS_Repository.Repository
                            tableId = t.Id,
                            OrderStatus = o.Orderstatus,
                             Name = t.Name
-                       }).ToListAsync();
+                       }).ToList();
+
+            for (int i = 0; i < tbl.Count; i++)
+            {
+                tbl[i].orderDetails = await GetpendingOrdersByID(tbl[i].orderID);
+            }
             return await Task.Run(() => tbl);
+        }
+        public async Task<IList<OrderDTO>> GetpendingOrdersByID(int orderID)
+        {
+            
+            var data = (from s in _context.OrderItemstbls
+                        join f in _context.FoodItems on 
+                        s.ItemId equals f.Id
+                        where s.OrderId == orderID
+                        select new OrderDTO
+                        {
+                            OrderID = s.Id,
+                            ItemName = s.ItemName,
+                            ItemStatus = s.Status,
+                            Price = f.Price
+                           
+                        }).ToList();
+            return await Task.Run(()=>data);
+
+        }
+
+        public async Task<IList<FoodItemList>> getfooditemsList()
+        {
+            var fooditem = await _context.FoodItems.ToListAsync();
+            var foodList = (from f in fooditem
+                            join c in _context.Categories on f.CategoryId equals c.Id
+                            select new FoodItemList
+                            {
+                                itemId = f.Id,
+                                itemName = f.ItemName,
+                                itemDec = f.ItemDec,
+                                itemType = f.ItemType,
+                                price = f.Price,
+                                categoryId = f.CategoryId,
+                                categoryName = c.Name
+                            }).ToList();
+            return await Task.Run(()=> foodList);
+        }
+
+        public async Task<bool> placeOrderforTable(List<placeOrderDTO> placobj)
+        {
+            var orderid = placobj[0].orderId;
+            if (orderid != 0)
+            {
+                return await insertorderItems(placobj,orderid);
+            }
+            else
+            {
+                var ordrdetais = await insertOrder(placobj[0]);
+                return await insertorderItems(placobj, ordrdetais.Id);
+            }
+
+        }
+
+        public async Task<bool> fishorder(placeOrderDTO orderId)
+        {
+            var orderitems = _context.OrderItemstbls.Where(x => x.OrderId == orderId.orderId).ToList();
+
+            foreach (var item in orderitems)
+            {
+                item.Status = "D";
+               // _context.OrderItemstbls.Add(item);
+                _context.Entry(item).State = EntityState.Modified;
+                await _context.SaveChangesAsync();
+            }
+
+            var ordrdetails = _context.OrderTbls.Where(x => x.Id == orderId.orderId).FirstOrDefault();
+            ordrdetails.Orderstatus = "C";
+            // _context.OrderTbls.Add(ordrdetails);
+            _context.Entry(ordrdetails).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+
+            var tbldetails = _context.TableMasters.Where(x => x.Id == ordrdetails.TableId).FirstOrDefault();
+            tbldetails.Status = "F";
+          //  _context.TableMasters.Add(tbldetails);
+            _context.Entry(tbldetails).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+
+            return true;
+
+        }
+
+        public async Task<bool> Reservetable(placeOrderDTO orderobj)
+        {
+            
+
+            var tbldetails = _context.TableMasters.Where(x => x.Id == orderobj.tableID).FirstOrDefault();
+            tbldetails.Status = "R";
+            _context.Entry(tbldetails).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+
+            return true;
+
+        }
+        public async Task<OrderTbl> insertOrder(placeOrderDTO ordobj)
+        {
+            var ordertbl = new OrderTbl();
+            ordertbl.Orderstatus = ordobj.orderstatus;
+            ordertbl.EmployeeId = ordobj.employeID;
+            ordertbl.TableId = ordobj.tableID;
+            ordertbl.OrderTime = DateTime.Now;
+            _context.OrderTbls.Add(ordertbl);
+            await _context.SaveChangesAsync();
+            int orderid = ordertbl.Id;
+            var orderdeails = (from o in _context.OrderTbls
+                              where o.Id == orderid
+                              select o).FirstOrDefault();
+
+            var tbldetails = _context.TableMasters.Where(x => x.Id == ordobj.tableID).FirstOrDefault();
+            tbldetails.Status = "B";
+            _context.Entry(tbldetails).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+
+            return orderdeails;
+        }
+
+        public async Task<bool> insertorderItems(List<placeOrderDTO> placobj,int orderid)
+        {
+            try
+            {
+                foreach (var item in placobj)
+                {
+                    for (int i = 0; i < item.counter; i++)
+                    {
+                        var itemorder = new OrderItemstbl();
+                        itemorder.OrderId = orderid;
+                        itemorder.ItemName = item.itemName;
+                        itemorder.ItemId = item.itemID;
+                        itemorder.Status = item.itemstatus;
+                        _context.OrderItemstbls.Add(itemorder);
+                    }
+                }
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
+            
         }
     }
 }

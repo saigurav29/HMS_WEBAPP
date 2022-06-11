@@ -51,7 +51,8 @@ namespace HMS_APP
             app.UseAuthorization();
             app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()
             .WithOrigins("http://localhost:4200")
-            .WithOrigins("http://saramahesh-001-site1.htempurl.com"));
+            .WithOrigins("http://saramahesh-001-site1.htempurl.com")
+            .WithOrigins("http://maheshsara-001-site1.ftempurl.com"));
 
 
             app.UseHttpsRedirection();

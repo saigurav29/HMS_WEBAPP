@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 using Microsoft.EntityFrameworkCore;
 
 #nullable disable
@@ -29,6 +30,7 @@ namespace HMS_DATAACCESS.Database
         [InverseProperty(nameof(LoginMaster.TableMasters))]
         public virtual LoginMaster Employee { get; set; }
         [InverseProperty(nameof(OrderTbl.Table))]
+        [JsonIgnore]
         public virtual ICollection<OrderTbl> OrderTbls { get; set; }
     }
 }
