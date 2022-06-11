@@ -16,7 +16,7 @@ namespace HMS_Repository.Extensions
         {
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IOrdersRepository, OrderRepository>();
-
+            services.AddScoped<IFoodRepository, FoodRepository>();
             services.AddDbContext<HMSDBDbContext>(options => options.UseSqlServer(config.GetConnectionString("DefaultConnection")));
             return services;
         }

@@ -76,4 +76,16 @@ namespace HMS_Repository.Modals
         public string itemstatus { get; set; }
 
     }
+
+    public class cheafupdateitemStatus
+    {
+        public int itemID { get; set; }
+        public string itemName { get; set; }
+        public int? orderId { get; set; }
+        public int? tableID { get; set; }
+        public string tablename { get; set; }
+        public int? employeID { get; set; }
+        public string itemstatus { get; set; }
+
+    }
 }
