@@ -16,7 +16,9 @@ namespace HMS_Repository.Interface
         Task<bool> placeOrderforTable(List<placeOrderDTO> placobj);
         Task<bool> fishorder(placeOrderDTO orderId);
         Task<bool> Reservetable(placeOrderDTO orderId);
+        Task<IList<OrderDTO>> GetpendingOrdersByID(int orderID);
 
-        
+
+
     }
 }

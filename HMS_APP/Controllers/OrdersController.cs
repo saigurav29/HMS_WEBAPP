@@ -70,5 +70,12 @@ namespace HMS_APP.Controllers
         {
             return await _orderRepository.Reservetable(orderId);
         }
+        [HttpPost]
+        [Route("GetpendingOrdersByID")]
+        public async Task<IList<OrderDTO>> GetpendingOrdersByID(placeOrderDTO orderId)
+        {
+            return await _orderRepository.GetpendingOrdersByID(orderId.orderId);
+        }
+        
     }
 }
