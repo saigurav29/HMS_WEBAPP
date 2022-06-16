@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 using Microsoft.EntityFrameworkCore;
 
 #nullable disable
@@ -30,6 +31,7 @@ namespace HMS_DATAACCESS.Database
 
         [ForeignKey(nameof(CategoryId))]
         [InverseProperty("FoodItems")]
+        [JsonIgnore]
         public virtual Category Category { get; set; }
         [InverseProperty(nameof(OrderItemstbl.Item))]
         public virtual ICollection<OrderItemstbl> OrderItemstbls { get; set; }

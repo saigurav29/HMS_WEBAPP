@@ -1,4 +1,5 @@
-﻿using HMS_Repository.Modals;
+﻿using HMS_DATAACCESS.Database;
+using HMS_Repository.Modals;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,5 +10,6 @@ namespace HMS_Repository.Interface
     {
         Task<IList<cheafupdateitemStatus>> GetCheaforders();
         Task<bool> updateItemStatus(cheafupdateitemStatus itemid);
+        Task<bool> InserUpdateFoodItem(FoodItem fooddata);
     }
 }

@@ -39,5 +39,20 @@ namespace HMS_APP.Controllers
         {
             return await _userRepository.SaveAllAsync(userinfo);
         }
+
+        [HttpPost]
+        [Route("userloginStatuschange")]
+        public void userloginStatuschange(UserResponse userinfo)
+        {
+              _userRepository.loginstatuschange(userinfo);
+        }
+
+        [HttpPost]
+        [Route("getuserInfoById")]
+        public async Task<UserResponse> getuserInfoById(UserResponse userinfo)
+        {
+           return await _userRepository.getuserInfoById(userinfo);
+        }
+
     }
 }

@@ -27,6 +27,13 @@ namespace HMS_Repository.Repository
 
         }
 
+        public async Task<UserResponse> getuserInfoById(UserResponse userinfo)
+        {
+            var data = await _context.LoginMasters.Where(x=>x.Id==userinfo.Id).ToListAsync();
+            return processdata(data)[0];
+
+        }
+
         public async Task<IList<UserResponse>> ValidateLogin(Userlogin userinfo)
         {
             try
@@ -34,6 +41,8 @@ namespace HMS_Repository.Repository
                 var data = await _context.LoginMasters.Where(u => u.Username == userinfo.Username && u.Password == userinfo.Password).ToListAsync();
                 if (data.Count > 0)
                 {
+                    UserResponse empdat = new UserResponse() { Id = data[0].Id, Isactive = true };
+                    loginstatuschange(empdat);
                     return processdata(data);
                 }
                 else
@@ -46,6 +55,14 @@ namespace HMS_Repository.Repository
                 return null;
             }
            
+        }
+
+        public void loginstatuschange(UserResponse empdata)
+        {
+            var getmpdat = _context.LoginMasters.Where(u => u.Id == empdata.Id).FirstOrDefault();
+            getmpdat.Isactive = empdata.Isactive ;
+            _context.Entry(getmpdat).State = EntityState.Modified;
+            _context.SaveChangesAsync();
         }
         public Task<bool> SaveAllAsync(LoginMaster userdata)
         {

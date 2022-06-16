@@ -40,6 +40,50 @@ namespace HMS_Repository.Repository
 
         }
 
+        public async Task<IList<OrderDTO>> getallOrdersList()
+        {
+ 
+            var data = (from s in _context.OrderTbls
+                       join e in _context.LoginMasters on 
+                       s.EmployeeId equals e.Id
+                       join t in _context.TableMasters on 
+                       s.TableId equals t.Id
+                       orderby s.Orderstatus descending
+                        select new OrderDTO
+                        {
+                            OrderID = s.Id,
+                            EmployeeID = s.EmployeeId,
+                            empName = e.Name,
+                            TableID = s.TableId,
+                            OrderTime = s.OrderTime,
+                            Orderstatus=s.Orderstatus,
+                            ItemName=t.Name
+                            
+                        }).ToList();
+            for (int i = 0; i < data.Count; i++)
+            {
+                data[i].Price = getsumoforder(data[i].OrderID);
+            }
+            return await Task.Run(()=>data);
+
+        }
+        public int getsumoforder(int id)
+        {
+            var getprice = (from o in _context.OrderItemstbls
+                            join f in _context.FoodItems
+                            on o.ItemId equals f.Id
+                            where o.OrderId == id
+                            select new OrderDTO
+                            {
+                                Price = f.Price
+                            }).ToList();
+            int s = 0;
+            foreach (var item in getprice)
+            {
+                s = s + Convert.ToInt32(item.Price);
+            }
+            return s;
+        }
         public async Task<dashboardCards> getorderscount()
         {
             var ordercount = (from o in _context.OrderTbls where o.OrderTime.Value.Month == DateTime.Today.Month &&

@@ -47,5 +47,36 @@ namespace HMS_Repository.Repository
             return true;
         }
 
+        public Task<bool> InserUpdateFoodItem(FoodItem fooddata)
+        {
+            bool status = false;
+            if (fooddata.Id == 0)
+            {
+                _context.FoodItems.Add(fooddata);
+                _context.SaveChangesAsync();
+                status = true;
+            }
+            else
+            {
+                var getmpdat = _context.FoodItems.Where(u => u.Id == fooddata.Id).FirstOrDefault();
+                if (getmpdat != null)
+                {
+                    getmpdat.ItemName = fooddata.ItemName ?? getmpdat.ItemName;
+                    getmpdat.ItemDec = fooddata.ItemDec ?? getmpdat.ItemDec;
+                    getmpdat.ItemType = fooddata.ItemType ?? getmpdat.ItemType;
+                    getmpdat.Price = fooddata.Price ?? getmpdat.Price;
+                    getmpdat.CategoryId= fooddata.CategoryId ?? getmpdat.CategoryId;
+                   
+                    _context.Entry(getmpdat).State = EntityState.Modified;
+                    _context.SaveChangesAsync();
+                    status = true;
+                }
+                else { status = false; }
+
+            }
+            return Task.Run(() => status);
+
+        }
+
     }
 }
