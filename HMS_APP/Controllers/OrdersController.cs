@@ -59,6 +59,13 @@ namespace HMS_APP.Controllers
         }
 
         [HttpPost]
+        [Route("getallOrdersList")]
+        public async Task<IList<OrderDTO>> getallOrdersList()
+        {
+            return await _orderRepository.getallOrdersList();
+        }
+
+        [HttpPost]
         [Route("fishorder")]
         public async Task<bool> fishorder(placeOrderDTO orderId)
         {

@@ -15,6 +15,7 @@ namespace HMS_Repository.Modals
         public string ItemName { get; set; }
         public string ItemStatus { get; set; }
         public int? Price { get; set; }
+        public string empName { get; set; }
     }
     public class dashboardCards
     {

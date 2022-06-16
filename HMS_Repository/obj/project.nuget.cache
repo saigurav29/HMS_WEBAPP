@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "foRbPujN0JBk9Rd2iEgxK4BmBfdq4TVSpOV3qyEGGOBVUP5XuYsj/3rFmh3JA0h5oOwVaWB3o1etqRRmdM2XMQ==",
+  "dgSpecHash": "cnIC77/B52RrWlUF79OwNniQ+xvlJmxu1LNIp7UyMT6pk/oc2AogVY+qpEmz6ZK6tbGDexjnyeeVbLvXHsmqzg==",
   "success": true,
   "projectFilePath": "F:\\Mahesh\\GIT_HMS_WEBAPP\\HMS_WEBAPP\\HMS_Repository\\HMS_Repository.csproj",
   "expectedPackageFiles": [
@@ -128,7 +128,8 @@
     "C:\\Users\\Sai prasad\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\Sai prasad\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Sai prasad\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\Sai prasad\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    "C:\\Users\\Sai prasad\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
+    "C:\\Users\\Sai prasad\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.25\\microsoft.netcore.app.host.win-x64.3.1.25.nupkg.sha512"
   ],
   "logs": []
 }

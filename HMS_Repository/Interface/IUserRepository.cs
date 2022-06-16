@@ -12,5 +12,7 @@ namespace HMS_Repository.Interface
         Task<IList<UserResponse>> GetLoginMasters();
         Task<IList<UserResponse>> ValidateLogin(Userlogin userinfo);
         Task<bool> SaveAllAsync(LoginMaster userdata);
+        void loginstatuschange(UserResponse empdata);
+        Task<UserResponse> getuserInfoById(UserResponse userinfo);
     }
 }

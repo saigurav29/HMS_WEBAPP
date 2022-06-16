@@ -1,4 +1,5 @@
-﻿using HMS_Repository.Interface;
+﻿using HMS_DATAACCESS.Database;
+using HMS_Repository.Interface;
 using HMS_Repository.Modals;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -31,5 +32,11 @@ namespace HMS_APP.Controllers
             return await _FoodRepository.updateItemStatus(itemid);
         }
 
+        [HttpPost]
+        [Route("InserUpdateFoodItem")]
+        public async Task<bool> InserUpdateFoodItem(FoodItem fooddata)
+        {
+            return await _FoodRepository.InserUpdateFoodItem(fooddata);
+        }
     }
 }
